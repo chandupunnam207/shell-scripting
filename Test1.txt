@@ -1,5 +1,0 @@
-Hello, Welcome to Git Repos
-
-This is my 14th repository and first one in Github public
-
-New Line

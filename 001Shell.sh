@@ -1,1 +1,1 @@
-This is not a shell script
+Blank shell scripting file
