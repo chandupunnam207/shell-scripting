@@ -3,3 +3,4 @@
 ls
 head /etc/passwd
 tail /etc/passwd
+ls -l
