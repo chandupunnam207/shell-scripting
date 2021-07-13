@@ -6,3 +6,4 @@ ls
 ls -l
 cat 001Shell.sh
 
+echo This is my shell scripting page
