@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-echo -e 'Hello World, \n\t This is my print page'
+echo -e '\e[31mHello World, \n\t This is my print page\e'
