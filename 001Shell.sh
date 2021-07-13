@@ -1,1 +1,5 @@
-Blank shell scripting file
+#!/usr/bin/bash
+
+ls
+head /etc/passwd
+tail /etc/passwd
