@@ -16,4 +16,4 @@ echo Here is the output for your shell = $Output_files
 
 
 a=(10 20)
-echo {a[1]}
+echo ${a[1]}
