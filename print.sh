@@ -6,4 +6,3 @@ echo -e '\e[32mMessage in Green\e'
 echo -e '\e[33mMessage in Yellow\e'
 echo -e '\e[34mMessage in Blue\e'
 echo -e '\e[35mMessage in Magenta\e[0m'
-echo Welcome to my print page
