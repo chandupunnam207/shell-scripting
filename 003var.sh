@@ -2,7 +2,7 @@
 
 a=10
 b=20
-c=$(a+b)
+c=$((a+b))
 echo $a
 echo $b
 echo $c
