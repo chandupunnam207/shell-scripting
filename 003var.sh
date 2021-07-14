@@ -13,3 +13,7 @@ echo Welcome, Today date is $Date
 ##Output of LS and Cat commands for files
 Output_files=$(cat 001Shell.sh)
 echo Here is the output for your shell = $Output_files
+
+
+a=(10 20)
+echo {a[1]}
