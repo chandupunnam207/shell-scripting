@@ -2,7 +2,7 @@
 
 Testing() {
 
-  Echo hello, my name is xxxx
+  echo hello, my name is xxxx
 
 }
 
