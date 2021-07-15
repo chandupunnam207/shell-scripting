@@ -6,9 +6,9 @@ Testing() {
   a=100
   b=200
   c=300
-  echo value of d = ${d}
-  echo value of e = ${e}
-  echo value of f = ${f}
+  echo value of d=${d}
+  echo value of e=${e}
+  echo value of f=${f}
 }
 
 d=400
