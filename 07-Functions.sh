@@ -2,7 +2,7 @@
 
 Testing() {
 
-  echo hello, my name is xxxx
+  echo This is my function to automate my job
 
 }
 
