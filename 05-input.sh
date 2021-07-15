@@ -12,11 +12,11 @@ echo $1
 ## $2 is the second argument
 echo $2
 
-## Pulls all the passed values or arguments to the script
+## Pulls all the parsed values or arguments to the script
 echo $*
 
 echo $@
 
-## Number of passed values
+## Number of parsed values
 echo $#
 
