@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
-Testing () {
+Testing() {
 
-  Echo "unction for automating my job"
+  Echo Function for automating my job
 
 }
 
