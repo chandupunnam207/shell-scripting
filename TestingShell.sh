@@ -31,11 +31,35 @@ echo Location=$location
 echo course name=$course
 echo course start date=$date
 
+## Input function into shell scripting can take input from terminal and can be accessed from input commands such as $0=script name, $1=first argument
+# $* or $@ pulls all the parsed values into the script and $# prints the number of values parsed into the script
 echo $0
 echo $1
 echo $*
 echo $@
 echo $#
+echo -e "\e[36m\n*****************\e[0m"
+
+TestFunction(){
+  a=100000
+  b=200000
+  c=300000
+
+}
+TestFunction
+echo value of a =$a
+echo value of b =$b
+echo value of c =$c
+
+
+
+
+
+
+
+
+
+
 
 
 
