@@ -31,7 +31,12 @@ echo Location=$location
 echo course name=$course
 echo course start date=$date
 
-echo
+echo $0
+echo $1
+echo $*
+echo $@
+echo $#
+
 
 
 
