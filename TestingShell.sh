@@ -28,6 +28,10 @@ echo ${c[*]:5:9}
 
 echo Name=$name
 echo Location=$location
+echo course name=$course
+echo course start date=$date
+
+
 
 
 
