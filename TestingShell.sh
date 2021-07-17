@@ -2,7 +2,6 @@
 
 type bash
 ls
-ls -ls
 
 echo Hello India
 echo My shell scripting needs code
