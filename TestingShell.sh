@@ -20,7 +20,7 @@ echo -e "\e[36m*\n**\n***\n****\n*****\e[0m"
 a=10
 b=20
 c=(0 10 20 30 40 50 60 70 80 90 100)
-echo sum of a and b = ADD(($a+$b))
+echo sum of a and b = $((a+b))
 echo ${c[5]}
 echo ${c[4]}
 echo ${c[9]}
