@@ -8,3 +8,5 @@ echo Hello India
 echo My shell scripting needs code
 
 echo -e "My command is printed correctly \nThank you"
+echo -e "\e[31m Apple is red in color\e[0m"
+
