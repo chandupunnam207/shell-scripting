@@ -7,4 +7,4 @@ cat 01-Shell.sh
 echo Hello India
 echo My shell scripting needs code
 
-echo -e " My command is printed correctly"
+echo -e "\e My command is printed correctly \nThank you"
