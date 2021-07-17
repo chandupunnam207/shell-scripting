@@ -3,9 +3,16 @@
 type bash
 ls
 
+#Printing on the screen can be done by two commands they are
+#1.printf
+#2.echo
+#Syntax echo <MESSAGE TO PRINT>
+#Simple echo command
 echo Hello India
 echo My shell scripting needs code
 
+#Syntax for color or new line is echo -e "MESSAGE\n\t\e" where \n is new line \t is tab space and -e is an option to print new line or tab space
+#Syntax for enabling colors is \e and disabling the colors is \e[om
 echo -e "\e[35mMy command is printed correctly \nThank you\e[0m"
 echo -e "\e[31mApple is red in color\e[0m"
 echo -e "\e[32mI like green tea\e[0m"
