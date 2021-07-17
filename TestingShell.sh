@@ -22,7 +22,7 @@ echo -e "\e[36m*\n**\n***\n****\n*****\e[0m"
 
 a=10
 b=20
-echo sum of a and b = add($a+$b)
+echo sum of a and b = $a $b
 
 
 
