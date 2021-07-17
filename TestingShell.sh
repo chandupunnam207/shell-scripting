@@ -26,6 +26,10 @@ echo ${c[4]}
 echo ${c[9]}
 echo ${c[*]:5:9}
 
+echo Name=$name
+echo Location=$location
+
+
 
 
 
