@@ -44,12 +44,16 @@ TestFunction(){
   a=100000
   b=200000
   c=300000
+  echo value of the first argument of function=$1
+  echo value of the first argument of function=$*
 
 }
-TestFunction
+TestFunction NTPC Bhel
 echo value of a =$a
 echo value of b =$b
 echo value of c =$c
+echo value of first argument=$1
+echo value of first argument=$*
 
 
 
