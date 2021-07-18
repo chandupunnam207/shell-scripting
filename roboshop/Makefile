@@ -20,6 +20,8 @@ redis:	## Install Redis
 	@redis.sh
 rabbitmq:	## Install RabbitMQ
 	@rabbitmq.sh
+databases: ## Install all databases
+databases: mongodb redis rabbitmq mysql
 
 
 
