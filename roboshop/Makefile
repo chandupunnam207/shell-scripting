@@ -6,7 +6,7 @@ cart:		## Install Cart Component
 	@cart.sh
 catalogue:	## Install Catalogue Component
 	@catalogue.sh
-user:	## Install User Component
+user:		## Install User Component
 	@user.sh
 shipping:	## Install Shipping Component
 	@shipping.sh
