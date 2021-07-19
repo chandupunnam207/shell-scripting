@@ -1,3 +1,9 @@
 #!usr/bin/bash
 
-yum install nginx -y
+LOG=/tmp/roboshop.log
+
+yum install nginx -y >>$LOG
+
+systemctl enable nginx >>$LOG
+
+systemctl start nginx >>$LOG
