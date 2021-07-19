@@ -6,11 +6,10 @@ rm -f $LOG
 echo -e "Installing frontend"
 yum install nginx -y >>$LOG
 if [ $? -eq 0 ]; then
-    echo -n -e "\e[32m\t\tdone"
+    echo -n -e "\e[32mdone"
   else
-    echo -n -e "\e[32m\t\tfail"
+    echo -n -e "\e[32mfail"
 fi
-
 
 
 echo -e "Enabling nginx"
