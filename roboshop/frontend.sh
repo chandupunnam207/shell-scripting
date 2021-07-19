@@ -11,3 +11,4 @@ systemctl enable nginx >>$LOG
 echo Starting nginx
 systemctl start nginx >>$LOG
 
+
