@@ -1,3 +1,3 @@
 #!usr/bin/bash
 
-echo "Hello World"
+yum install nginx -y
