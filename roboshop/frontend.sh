@@ -4,11 +4,11 @@ LOG=/tmp/roboshop.log
 rm -f $LOG
 
 STAT_CHECK(){
-  if [ $? eq 0 ] then
+if [ $? eq 0 ]; then
     echo done
   else
     echo fail
-  fi
+fi
 }
 
 echo -e "Installing frontend"
