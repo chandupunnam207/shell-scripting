@@ -3,14 +3,25 @@
 LOG=/tmp/roboshop.log
 rm -f $LOG
 
-echo -e "Installing frontend \t...\e[32mdone\e[0m"
+STAT_CHECK(){
+  if [ $? eq 0 ] then
+    echo done
+  else
+    echo fail
+  fi
+}
+
+echo -e "Installing frontend"
 yum install nginx -y >>$LOG
 echo $?
+STAT_CHECK
 
-echo -e "Enabling nginx \t\t...\e[32mdone\e[0m"
+echo -e "Enabling nginx"
 systemctl enable nginx >>$LOG
 echo $?
+STAT_CHECK
 
-echo -e "Starting nginx \t\t...\e[32mdone\e[0m"
+echo -e "Starting nginx"
 systemctl start nginx >>$LOG
 echo $?
+STAT_CHECK
