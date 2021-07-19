@@ -2,7 +2,7 @@
 
 LOG=/tmp/roboshop.log
 
-echo -e "Installing frontend ...\e32mdone\e[0m"
+echo -e "Installing frontend ...\e[32mdone\e[0m"
 yum install nginx -y >>$LOG
 
 echo "Enabling nginx"
