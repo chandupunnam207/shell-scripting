@@ -1,7 +1,7 @@
 #!usr/bin/bash
 
 USER_ADD=$(id -u)
-if [USER_ADD ne 0] ; then
+if [$USER_ADD ne 0] ; then
   echo -e "\e[31mYou should be a root user or sudo user to run this command\e[0m"
 fi
 
