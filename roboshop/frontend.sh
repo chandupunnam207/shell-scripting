@@ -2,7 +2,7 @@
 
 source common.sh
 
-PRINT "Installing frontend..."
+PRINT "Installing frontend...\t"
 yum install nginx -y &>>$LOG
 STAT_CHECK $?
 
