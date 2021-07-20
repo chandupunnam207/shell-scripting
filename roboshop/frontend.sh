@@ -6,10 +6,10 @@ PRINT "Installing frontend..."
 yum install nginx -y &>>$LOG
 STAT_CHECK $?
 
-PRINT "Enabling nginx..."
+PRINT "Enabling nginx...\t"
 systemctl enable nginx &>>$LOG
 STAT_CHECK $?
 
-PRINT "Starting nginx..."
+PRINT "Starting nginx...\t"
 systemctl start nginx &>>$LOG
 STAT_CHECK $?
