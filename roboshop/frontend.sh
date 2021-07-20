@@ -19,10 +19,10 @@ yum install nginx -y >>$LOG
 STAT_CHECK $?
 
 
-echo -n -e "Enabling nginx..."
+echo -n -e "Enabling nginx\t..."
 systemctl enable nginx >>$LOG
 STAT_CHECK $?
 
-echo -n -e "Starting nginx..."
+echo -n -e "Starting nginx\t..."
 systemctl start nginx >>$LOG
 STAT_CHECK $?
