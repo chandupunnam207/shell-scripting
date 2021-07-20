@@ -15,14 +15,14 @@ STAT_CHECK() {
 }
 
 echo -n -e "Installing frontend..."
-yum install nginx -y >>$LOG
+yum install nginx -y &>>$LOG
 STAT_CHECK $?
 
 
 echo -n -e "Enabling nginx\t..."
-systemctl enable nginx >>$LOG
+systemctl enable nginx &>>$LOG
 STAT_CHECK $?
 
 echo -n -e "Starting nginx\t..."
-systemctl start nginx >>$LOG
+systemctl start nginx &>>$LOG
 STAT_CHECK $?
