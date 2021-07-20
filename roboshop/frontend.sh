@@ -2,14 +2,14 @@
 
 source common.sh
 
-PRINT "Installing frontend...\t"
+PRINT "Installing frontend"
 yum install nginx -y &>>$LOG
 STAT_CHECK $?
 
-PRINT "Enabling nginx...\t"
+PRINT "Enabling nginx\t"
 systemctl enable nginx &>>$LOG
 STAT_CHECK $?
 
-PRINT "Starting nginx...\t"
+PRINT "Starting nginx\t"
 systemctl start nginx &>>$LOG
 STAT_CHECK $?
