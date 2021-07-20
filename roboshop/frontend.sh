@@ -5,33 +5,25 @@ source common.sh
 LOG=/tmp/roboshop.log
 rm -f $LOG
 
-echo -e "Installing frontend"
+STAT_CHECK() {
+  if [ $1 -eq 0 ]; then
+     echo -n -e "\e[32mdone\e[0m"
+  else
+     echo -n -e "\e[31mfail\e[0m"
+  fi
+}
+
+
+
+echo -n -e "Installing frontend"
 yum install nginx -y >>$LOG
-
-  if [ $? -eq 0 ]; then
-    echo -n -e "\e[32mdone\e[0m"
-  else
-    echo -n -e "\e[31mfail\e[0m"
-fi
+STAT_CHECK $?
 
 
-
-echo -e "Enabling nginx"
+echo -n -e "Enabling nginx"
 systemctl enable nginx >>$LOG
-  if [ $? -eq 0 ]; then
-    echo -n -e "\e[32mdone\e[0m"
-  else
-    echo -n -e "\e[31mfail\e[0m"
-fi
+STAT_CHECK $?
 
-
-
-echo -e "Starting nginx"
+echo -n -e "Starting nginx"
 systemctl start nginx >>$LOG
-
-  if [ $? -eq 0 ]; then
-    echo -n -e "\e[32mdone\e[0m"
-  else
-    echo -n -e "\e[31mfail\e[0m"
-fi
-
+STAT_CHECK $?
