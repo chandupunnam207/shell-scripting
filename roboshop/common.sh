@@ -1,9 +1,13 @@
 #!usr/bin/bash
 
-STAT_CHECK(){
-  if [ $? -eq 0 ]; then
-    echo -n -e "\e[32mdone\e[0m"
+LOG=/tmp/roboshop.log
+rm -f $LOG
+
+STAT_CHECK() {
+  if [ $1 -eq 0 ]; then
+     echo -e "\e[32m\tdone\e[0m"
   else
-    echo -n -e "\e[31mfail\e[0m"
-fi
+     echo -e "\e[31mfail\e[0m"
+     exit 1
+  fi
 }
