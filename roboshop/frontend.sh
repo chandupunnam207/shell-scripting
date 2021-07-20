@@ -2,15 +2,15 @@
 
 source common.sh
 
-echo -n -e "Installing frontend..."
+echo -n -e "Installing frontend\t..."
 yum install nginx -y &>>$LOG
 STAT_CHECK $?
 
 
-echo -n -e "Enabling nginx\t..."
+echo -n -e "Enabling nginx\t\t\t..."
 systemctl enable nginx &>>$LOG
 STAT_CHECK $?
 
-echo -n -e "Starting nginx\t..."
+echo -n -e "Starting nginx\t\t\t..."
 systemctl start nginx &>>$LOG
 STAT_CHECK $?
