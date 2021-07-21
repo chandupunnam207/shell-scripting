@@ -22,7 +22,7 @@ PRINT "Remove Old HTDocs"
 cd /usr/share/nginx/html && rm -rf * &>>$LOG
 STAT_CHECK $?
 
-PRINT "Extract Frontend Main Zip File"
+PRINT "Extract Frontend Zip"
 unzip /tmp/frontend.zip &>>$LOG  && mv frontend-main/* . &>>$LOG && mv static/* . &>>$LOG && rm -rf frontend-master static &>>$LOG
 STAT_CHECK $?
 
