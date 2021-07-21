@@ -16,6 +16,7 @@ STAT_CHECK $?
 
 PRINT "Download Frontend"
 yum install curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>$LOG
+STAT_CHECK $?
 
 PRINT "Remove Old HTDocs"
 cd /usr/share/nginx/html && rm -rf * &>>$LOG
