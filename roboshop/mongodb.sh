@@ -19,8 +19,8 @@ PRINT "Enable MongoDB"
 systemctl enable mongod
 STAT_CHECK $?
 
-PRINT "Start MongoFB"
-systemctl start MongoDB
+PRINT "Start MongoDB"
+systemctl start mongodb
 STAT_CHECK $?
 
 
