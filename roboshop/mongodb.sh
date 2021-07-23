@@ -20,7 +20,7 @@ systemctl enable mongod
 STAT_CHECK $?
 
 PRINT "Start MongoDB"
-systemctl start mongodb
+systemctl start mongod
 STAT_CHECK $?
 
 
