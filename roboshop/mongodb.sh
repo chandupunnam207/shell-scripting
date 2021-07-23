@@ -16,7 +16,7 @@ yum install -y mongodb-org &>>$LOG
 STAT_CHECK $?
 
 PRINT "Update mongodb IP in config"
-sed -i -e '/127.0.0.1/0.0.0.0' /etc/mong.conf
+sed -i -e '/127.0.0.1/0.0.0.0/' /etc/mong.conf
 STAT_CHECK $?
 
 PRINT "Enable MongoDB\t"
