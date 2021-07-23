@@ -12,9 +12,16 @@ gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc' >/etc/yum.repos.d/mong
 STAT_CHECK $?
 
 PRINT "Installing mongodb"
-yum install -y mongodb-org >>$LOG
+yum install -y mongodb-org &>>$LOG
 STAT_CHECK $?
 
+PRINT "Enable MongoDB"
+systemctl enable mongod
+STAT_CHECK $?
+
+PRINT "Start MongoFB"
+systemctl start MongoDB
+STAT_CHECK $?
 
 
 
