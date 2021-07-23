@@ -28,6 +28,11 @@ STAT_CHECK $?
 
 PRINT "Update Roboshop Configuration"
 mv localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG
+STAT_CHECK $?
+
+PRINT "RESTART NGINX"
+systemctl restart nginx
+STAT_CHECK $?
 
 
 
