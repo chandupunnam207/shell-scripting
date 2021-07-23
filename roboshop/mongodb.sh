@@ -15,13 +15,26 @@ PRINT "Installing mongodb"
 yum install -y mongodb-org &>>$LOG
 STAT_CHECK $?
 
-PRINT "Enable MongoDB\t"
-systemctl enable mongod
+PRINT "Update mongodb IP in config"
+sed -i -e '/127.0.0.1/0.0.0.0' &>>LOG
 STAT_CHECK $?
 
-PRINT "Start MongoDB\t"
-systemctl start mongod
+PRINT "Enable MongoDB\t"
+systemctl enable mongod &>>$LOG && systemctl start mongod &>>$LOG
 STAT_CHECK $?
+
+PRINT "Download mongodb schema"
+curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"&>>$LOG
+STAT_CHECK $?
+
+PRINT ""
+cd /tmp && unzip mongodb.zip&>>$LOG $$ cd mongodb-main && mongo < catalogue.js&>>$LOG && mongo < users.js&>>$LOG
+STAT_CHECK $?
+
+
+
+
+
 
 
 
