@@ -2,7 +2,7 @@
 
 source common.sh
 
-PRINT "Install NodeJS\t"
+PRINT "Install NodeJS\t\t"
 yum install nodejs make gcc-c++ -y &>>$LOG
 STAT_CHECK $?
 
@@ -13,7 +13,7 @@ id roboshop &>>$LOG
   fi
 STAT_CHECK $?
 
-PRINT "Download Catalogue"
+PRINT "Download Catalogue\t"
 curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>$LOG
 STAT_CHECK $?
 
