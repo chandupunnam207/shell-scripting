@@ -26,7 +26,7 @@ cd /home/roboshop/catalogue && npm install --unsafe-perm&>>$LOG
 STAT_CHECK $?
 
 PRINT "Fix Application permissions"
-chown roboshop: roboshop /home/roboshop -R &>>$LOG
+chown roboshop:roboshop /home/roboshop -R &>>$LOG
 STAT_CHECK $?
 
 PRINT "Update Systemd File"
