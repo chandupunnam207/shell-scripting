@@ -17,13 +17,14 @@ PRINT "Download Catalogue\t"
 curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>$LOG
 STAT_CHECK $?
 
-PRINT "Extract downloaded code"
+PRINT "Extract downloaded code\t"
 cd /home/roboshop && unzip -o /tmp/catalogue.zip &>>$LOG && mv catalogue-main catalogue &>>$LOG && cd /home/roboshop/catalogue && npm install &>>$LOG
 STAT_CHECK $?
 
+PRINT "Update service file"
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 
-
-# mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+PRINT "Reload "
 # systemctl daemon-reload
 # systemctl start catalogue
 # systemctl enable catalogue
