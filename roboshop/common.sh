@@ -1,8 +1,8 @@
 #!usr/bin/bash
 
 ##FUNCTION TO VALIDATE THE USER
-USER_ADD=$(id -u)
-if [ $USER_ADD -ne 0 ] ; then
+USER_ID=$(id -u)
+if [ $USER_ID -ne 0 ] ; then
   echo -e "\e[31mYou should be a root user or sudo user to run this command\e[0m"
   exit 2
 fi
