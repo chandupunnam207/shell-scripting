@@ -17,6 +17,7 @@ STAT_CHECK() {
      echo -e "\e[32mdone\e[0m"
   else
      echo -e "\e[31mfail\e[0m"
+     echo -e "\eCheck the log file for more details here : $LOG"
      exit 1
   fi
 }
