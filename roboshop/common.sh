@@ -24,5 +24,5 @@ STAT_CHECK() {
 
 ##FUNCTION TO ADD ECHO AND TAB SCRIPT FROM FRONTEND
 PRINT() {
-  echo -n -e "###################$1\t\t...###################"
+  echo -n -e "$1\t\t..."
 }
