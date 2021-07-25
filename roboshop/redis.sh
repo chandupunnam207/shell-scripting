@@ -2,15 +2,15 @@
 
 source common.sh
 
-PRINT "Install epel release"
+PRINT "Install epel release\t"
 yum install epel-release yum-utils http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y &>>$LOG
 STAT_CHECK $?
 
-PRINT "Install Remi Repo"
+PRINT "Install Remi Repo\t"
 yum install redis -y --enablerepo=remi &>>$LOG
 STAT_CHECK $?
 
-PRINT "Update Redis IP"
+PRINT "Update Redis IP\t\t"
 sed -i -e "s/127.0.0.1/0.0.0.0/" /etc/redis.conf &>>$LOG
 STAT_CHECK $?
 
