@@ -19,7 +19,7 @@ unzip /tmp/frontend.zip &>>$LOG  && mv frontend-main/* . &>>$LOG && mv static/* 
 STAT_CHECK $?
 
 PRINT "Update Roboshop Configuration"
-mv localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG
+sed -i -e "catalogue/ s/localhost/catalogue.roboshop.internal/" -e "user/ s/localhost/user.roboshop.internal/" -e "cart/ s/localhost/cart.roboshop.internal/" mv localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG
 STAT_CHECK $?
 
 PRINT "Enabling nginx\t\t"
