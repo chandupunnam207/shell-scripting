@@ -40,7 +40,7 @@ NODEJS() {
     fi
   STAT_CHECK $?
 
-  PRINT "Download Catalogue\t"
+  PRINT "Download ${COMPONENT} \t"
   curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip" &>>$LOG
   STAT_CHECK $?
 
@@ -61,7 +61,7 @@ NODEJS() {
   STAT_CHECK $?
 
 
-  PRINT "Start Catalogue service\t"
+  PRINT "Start ${COMPONENT}  service\t"
   systemctl daemon-reload &>>$LOG && systemctl start ${COMPONENT} &>>$LOG && systemctl enable ${COMPONENT} &>>$LOG
   STAT_CHECK $?
 }
