@@ -40,7 +40,7 @@ NODEJS() {
     fi
   STAT_CHECK $?
 
-  PRINT "Download ${COMPONENT} \t"
+  PRINT "Download ${COMPONENT} \t\t"
   curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip" &>>$LOG
   STAT_CHECK $?
 
